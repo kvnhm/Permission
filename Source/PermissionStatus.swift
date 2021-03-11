@@ -27,6 +27,8 @@ public enum PermissionStatus: String {
     case denied        = "Denied"
     case disabled      = "Disabled"
     case notDetermined = "Not Determined"
+    case limited       = "Limited"
+    case ephemeral     = "Ephemeral"
 
     init?(string: String?) {
         guard let string = string else { return nil }

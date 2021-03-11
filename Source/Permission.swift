@@ -230,6 +230,10 @@ open class Permission: NSObject {
         case .notDetermined: presentPrePermissionAlert ? prePermissionAlert.present() : requestAuthorization(callbacks)
         case .denied:        presentDeniedAlert ? deniedAlert.present() : callbacks(status)
         case .disabled:      presentDisabledAlert ? disabledAlert.present() : callbacks(status)
+        case .ephemeral:
+            callbacks(status)
+        case .limited:
+            callbacks(status)
         }
     }
 
